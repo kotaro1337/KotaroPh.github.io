@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>@kotaroisnice</title>
+  <style>
+    h7 {
+        height: 70px;
+        font-size: -3%; /* Adjusted font size for readability */
+        color: rgb(236, 160, 229);
+        margin-bottom: 1%;
+        padding: %; /* Added padding for better text spacing */
+      }
+
+    html, body {
+        height: 70%;
+        width: 83%;
+        background: #122139; url('https://cdn.discordapp.com/attachments/1189099036351938721/1245064126917509170/shnds.png?ex=66804254&is=667ef0d4&hm=ff68e3de4ff15823170250842901a2289a3fba187a338a8b1986afeb129acf2a&') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+
+
+
+
+    .flower-image {
+        margin-top: 20px; /* Adjust spacing between message and flower image */
+    }
+
+    .container {
+      width: 100px;
+      height: 300px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      transform: scale(0.6);
+    }
+
+    .container div {
+      position: absolute;
+    }
+
+
+    .rose-petals > div {
+      background: #d52d58;
+      width: 45px;
+      height: 80px;
+    }
+
+    .rose-petals > div:nth-child(1) {
+      border-radius: 15px;
+      left: 20px;
+      top: -6px;
+    }
+
+    .rose-petals > div:nth-child(2), .rose-petals > div:nth-child(4), .rose-petals > div:nth-child(6) {
+      border-radius: 0 30px 0 30px;
+      background: #b81b43;
+      left: 0;
+      transform-origin: bottom right;
+    }
+
+    .rose-petals > div:nth-child(3), .rose-petals > div:nth-child(5), .rose-petals > div:nth-child(7) {
+      border-radius: 30px 0 30px 0;
+      left: 40px;
+      transform-origin: bottom left;
+    }
+
+    .rose-petals > div:nth-child(2) {
+      animation: openRose2 3s ease-in-out forwards 2s;
+      z-index: 5;
+      background: #9e183a;
+      top: 10px;
+      height: 70px;
+    }
+
+    .rose-petals > div:nth-child(3) {
+      animation: openRose3 3s ease-in-out forwards 2s;
+      z-index: 4;
+      background: #9e183a;
+      top: 10px;
+      height: 70px;
+    }
+
+    .rose-petals > div:nth-child(4) {
+      animation: openRose4 3s ease-in-out forwards 2s;
+      z-index: 3;
+      background: #b81b43;
+      top: 5px;
+      height: 75px;
+    }
+
+    .rose-petals > div:nth-child(5) {
+      animation: openRose5 3s ease-in-out forwards 2s;
+      z-index: 2;
+      background: #b81b43;
+      top: 5px;
+      height: 75px;
+    }
+
+    .rose-petals > div:nth-child(6) {
+      animation: openRose6 3s ease-in-out forwards 2s;
+      z-index: 1;
+      background: #c9204b;
+    }
+
+    .rose-petals > div:nth-child(7) {
+      animation: openRose7 3s ease-in-out forwards 2s;
+      z-index: 0;
+      background: #c9204b;
+    }
+
+    .rose-leaves > div:nth-last-child(1) {
+      width: 55px;
+      height: 30px;
+      background: #338f37;
+      top: 60px;
+      left: 15px;
+      border-radius: 100px;
+    }
+
+    .rose-leaves > div:nth-child(1) {
+      width: 6px;
+      height: 230px;
+      background: #066406;
+      top: 80px;
+      left: 40px;
+    }
+
+    .sparkles {
+      bottom: -40px;
+    }
+
+    .sparkles > div {
+      width: 4px;
+      height: 4px;
+      border-radius: 100px;
+      background: #ff96c0;
+      box-shadow: 0px 0px 12px 2px #ff4e85;
+      bottom: 0;
+      opacity: 0;
+      animation: sparkle 4s ease-in-out infinite;
+    }
+
+    .sparkles > div:nth-child(1) {
+      left: 46px;
+      animation-delay: 3s;
+    }
+
+    .sparkles > div:nth-child(2) {
+      left: 166px;
+      animation-delay: 2s;
+    }
+
+    .sparkles > div:nth-child(3) {
+      left: -46px;
+      animation-delay: 1s;
+    }
+
+    .sparkles > div:nth-child(4) {
+      left: 180px;
+      animation-delay: 2s;
+    }
+
+    .sparkles > div:nth-child(5) {
+      left: 27px;
+      animation-delay: 2s;
+    }
+
+    .sparkles > div:nth-child(6) {
+      left: -71px;
+      animation-delay: 1s;
+    }
+
+    .sparkles > div:nth-child(7) {
+      left: -11px;
+      animation-delay: 2s;
+    }
+
+    .sparkles > div:nth-child(8) {
+      left: 101px;
+      animation-delay: 1s;
+    }
+
+    .sparkles > div:nth-child(9) {
+      left: -83px;
+      animation-delay: 1s;
+    }
+
+    @keyframes sparkle {
+      50% {
+        opacity: 1;
+      }
+      100% {
+        bottom: 250px;
+      }
+    }
+
+    @keyframes openRose2 {
+      50% {
+        transform: rotate(-90deg);
+        top: 80px;
+        left: 100px;
+      }
+      100% {
+        transform: rotate(-60deg);
+        top: 210px;
+        left: -30px;
+      }
+    }
+
+    @keyframes openRose3 {
+      100% {
+        transform: rotate(60deg);
+      }
+    }
+
+    @keyframes openRose4 {
+      100% {
+        transform: rotate(-30deg);
+      }
+    }
+
+    @keyframes openRose5 {
+      100% {
+        transform: rotate(30deg);
+      }
+    }
+
+    @keyframes glowing {
+      50% {
+        box-shadow: 0px 0px 60px #f594b8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glass"></div>
+    <div class="glow"></div>
+    <div class="rose-leaves">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="rose-petals">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="sparkles">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="message-container">
+    <h7>Hi ssob I know na eto na last message ko for you
+        i wanna say Thank you this past 3 months of bonding kulitan Tampohan Hahai happy nakilala kita 
+        sorry being seloso of anything kasi i know naman na madali ako palitan btw Ingat Ka This July 2 On your Kyoto Fiedtrip i know na you mad to me Pero Ayumi Tandaan mopo nandito ako para sayo yea sorry again sa lahat ayumi 
+    Maybe if ok na problem ko i wanna meet you sa japan try ko kumuha visa muna for travel saka if di ako busy yea i wanna meet you also Kaira Hime And Baby Bella hahaha 
+     yea sorry sa lahat again sorry if being Pakielemero or what takot lang talaga ako na you left me but now i leaving sana you dont forgot me hahaha
+     always take care of yourself okie? you don't need to be harsh on yourself take it easy. if ur feeling tired take some rest okay?
+  Here Your Favorite Flower for you iloveuuusoomuchh
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </h7>
+
+  </div>
+</body>
+</html>
